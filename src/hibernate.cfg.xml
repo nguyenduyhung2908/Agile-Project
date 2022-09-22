@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/agile_application</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="javaapplication11.model.Employees"/>
+        <mapping class="javaapplication11.model.Categories"/>
+        <mapping class="javaapplication11.model.Products"/>
+        <mapping class="javaapplication11.model.Order" />
+        <mapping class="javaapplication11.model.OrderDetail" />
+        <mapping class="javaapplication11.model.OrderDetailId" />
+    </session-factory>
+</hibernate-configuration>
+
